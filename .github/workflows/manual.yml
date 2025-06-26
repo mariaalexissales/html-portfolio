@@ -1,0 +1,16 @@
+name: Page Deployment
+
+on:
+  page_build:
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
+    
